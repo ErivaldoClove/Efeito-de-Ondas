@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Animation</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+    .notification {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+        background-color: #3498db;
+        animation: pulse 2s linear infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.5;
+        }
+        100% {
+            transform: scale(0.8);
+            opacity: 1;
+        }
+    }
+
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 1;
+        font-size: 4.3rem;
+    }
+
+    .notification-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="notification">
+        <div class="notification-text"><h1>Brevemente...</h1></div>
+    </div>
+</body>
+</html>
